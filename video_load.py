@@ -38,3 +38,14 @@ def list_files_from_zip_url(zip_url):
 files = list_files_from_zip_url(URL)
 files = [f for f in files if f.endswith('.avi')]
 files[:10]
+
+def get_class(fname):
+  """ Retrieve the name of the class given a filename.
+
+    Args:
+      fname: Name of the file in the UCF101 dataset.
+
+    Returns:
+      Class that the file belongs to.
+  """
+  return fname.split('_')[-3]
